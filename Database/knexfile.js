@@ -13,6 +13,14 @@ module.exports = {
       user: 'database',
       password: 'database',
       port: 3306,
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      directory: './src/migrations',
+      tableName: 'knex_migrations'
     }
   },
 
