@@ -1,0 +1,11 @@
+<h1>Incomes</h1>
+
+{{#if partialPrefix}}
+  {{> myPartial prefix=partialPrefix }}
+{{/if}}
+
+<ul class="income-list">
+  {{#each income}}
+    <li>{{this.Amouny}}</li>
+  {{/each}}
+</ul>
