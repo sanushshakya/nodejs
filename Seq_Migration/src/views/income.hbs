@@ -1,0 +1,30 @@
+<div class = "income">
+    <div class = "head-text">
+        <h1>ADD INCOME</h1>
+    </div>
+    <form action="/income" method="Post" class="form-align">
+        <div class="col-md-3">
+            <label for="Source" class="form-label">Source</label>
+            <input type="text" class="form-control" id="Source" name="Source"/>
+        </div>
+        <div class="col-md-3">
+            <label for="Categories" class="form-label">Categories</label>
+            <select id="Categories" name="Categories" class="form-select">
+            <option selected>Choose Categories</option>
+            <option>Salary</option>
+            <option>Business</option>
+            <option>Tips</option>
+            <option>Others</option>
+            </select>
+        </div>
+       <div class="col-md-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea class="form-control" id="Description" name="Description" placeholder="Required example textarea" required></textarea>
+        </div>
+        <div class="col-md-3">
+            <label for="Amount" class="form-label">Amount</label>
+            <input type="Number" class="form-control" id="Amount" name="Amount"/>
+        </div><br/>
+        <button type="submit" class="btn btn-primary">add</button>
+    </form>
+</div>

@@ -12,8 +12,7 @@ for(let i=0; i<=19; i++){
     }
 }
 
-date = moment(2022-01-12).get('date');
-console.log(date);
+
 
 // const d = data.articles.filter((dh)=>dh.author.match(name));
 // console.log(d)

@@ -1,0 +1,66 @@
+<div class="home">
+   
+    <div class="income-data">
+        <h3>INCOME DATAs</h3>
+        <table class="table table-success table-striped">
+            <tr>
+                <td>ID</td>
+                <td>Source</td>
+                <td>Categories</td>
+                <td>Description</td>
+                <td>Amount</td>
+            </tr>
+        {{#each income}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.Source}}</td>
+            <td>{{this.Categories}}</td>
+            <td>{{this.Description}}</td>
+            <td>{{this.Amount}}</td>
+        </tr>
+        {{/each}}
+        <tr>
+            <th>TOTAL INCOME:</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{total.income}}</td>
+        </tr>
+        </table>
+    </div>
+    
+
+  
+
+    <div class="expense-data">
+         <h3>Expense DATAs</h4>
+        <table class="table table-success table-striped">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Categories</td>
+                <td>Description</td>
+                <td>Amount</td>
+            </tr>
+        {{#each expense}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.Name}}</td>
+            <td>{{this.Categories}}</td>
+            <td>{{this.Description}}</td>
+            <td>{{this.Amount}}</td>
+        </tr>
+        {{/each}}
+        <tr>
+            <th>TOTAL EXPENSE:</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{total.expense}}</td>
+        </tr>
+        </table>
+    </div>
+
+  
+
+</div>
