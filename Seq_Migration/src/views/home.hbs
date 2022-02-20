@@ -1,5 +1,4 @@
 <div class="home">
-   
     <div class="income-data">
         <h3>INCOME DATAs</h3>
         <table class="table table-success table-striped">
@@ -10,15 +9,18 @@
                 <td>Description</td>
                 <td>Amount</td>
             </tr>
-        {{#each income}}
+        {{user}}
+       
         <tr>
             <td>{{this.id}}</td>
-            <td>{{this.Source}}</td>
-            <td>{{this.Categories}}</td>
-            <td>{{this.Description}}</td>
+            <td>{{this.Name}}</td>
+            <td>{{this.Username}}</td>
+            <td>{{this.Password}}</td>
             <td>{{this.Amount}}</td>
         </tr>
-        {{/each}}
+        
+        {{!-- {{/if}} --}}
+
         <tr>
             <th>TOTAL INCOME:</th>
             <td></td>
@@ -42,14 +44,14 @@
                 <td>Description</td>
                 <td>Amount</td>
             </tr>
-        {{#each expense}}
-        <tr>
+        {{#each user.expense}}
+        {{!-- <tr>
             <td>{{this.id}}</td>
             <td>{{this.Name}}</td>
             <td>{{this.Categories}}</td>
             <td>{{this.Description}}</td>
             <td>{{this.Amount}}</td>
-        </tr>
+        </tr> --}}
         {{/each}}
         <tr>
             <th>TOTAL EXPENSE:</th>

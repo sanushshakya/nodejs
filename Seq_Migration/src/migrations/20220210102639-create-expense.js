@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Expenses', {
@@ -7,6 +8,17 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      UserId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: "Users"
+          },
+          key: "id"
+        },
+        onDelete: 'CASCADE'
       },
       Name: {
         type: Sequelize.STRING,

@@ -1,16 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const HomeController = require('../controllers/home.controller')
-const IncomeController = require('../controllers/income.controller');
-const ExpenseController = require('../controllers/expense.controller');
+const { checkAuthenticate } = require('../middleware/auth.middleware')
 
-router.get('/', HomeController.renderIndex);
-
-router.get('/income',IncomeController.renderIncome)
-router.post('/income', IncomeController.createIncome);
-
-router.get('/expense',ExpenseController.renderExpense)
-router.post('/expense', ExpenseController.createExpense);
+router.use('/', require('./view.routes'))
+router.use('/api', checkAuthenticate, require('./api.routes'))
+router.use('/auth', require('./auth.routes'))
 
 
 module.exports = router;

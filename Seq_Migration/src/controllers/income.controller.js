@@ -11,15 +11,14 @@ const renderIncome = async (req, res) => {
 
 const createIncome = async (req, res) => {
     try {
-        console.log(req.body);
-        const { Source, Categories, Description, Amount } = req.body;
+        const { UserId, Source, Categories, Description, Amount } = req.body;
         const income = await Income.create({
+            UserId: UserId,
             Source: Source,
             Categories: Categories,
             Description: Description,
             Amount: Amount
         });
-        console.log(income);
         res.redirect("/");
       } catch (error) {
         console.log(error);
